@@ -4,6 +4,14 @@
 {% block title %}Add Exam {% endblock title %}
 {% block content %}
 
+<div class="row mt-4" style="margin: 0 auto">
+    
+    <div class="col col-md-5" style="text-align:center;">
+        <div class="alert alert-primary" role="alert">
+            <b>{{form_title}} {{action}} Form</b>
+        </div>   
+    </div>
+</div>
 <div class="col col-md-5" style="margin: 0 auto; margin-top: 65px;">
     <form enctype="multipart/form-data" method="post" action="">
             {% csrf_token %}
