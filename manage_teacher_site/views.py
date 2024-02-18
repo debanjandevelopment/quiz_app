@@ -9,3 +9,6 @@ class CreateQuestionPaperView(CreateView):
     model=CreateQuestionPaper
     fields= ['question_paper_name','total_question','exam_time','subject']
     template_name="form.html"
+    
+    def form_valid(self, form):
+        return super().form_valid(form)
