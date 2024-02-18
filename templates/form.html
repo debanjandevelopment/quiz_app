@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Add Exam {% endblock title %}
+{% block content %}
+
+<div class="col col-md-5" style="margin: 0 auto; margin-top: 65px;">
+    <form action="post">
+        {% csrf_token %}
+        {% crispy form %}
+        <button type="submit" class="btn btn-primary col-12 px-4">Create</button>
+    </form>
+</div>
+{% endblock content %}

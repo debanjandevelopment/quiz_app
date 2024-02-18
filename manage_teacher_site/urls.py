@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import dashboard,add_exam
+from .views import dashboard,CreateQuestionPaperView
 
 app_name = "teacher_manage_app"
 urlpatterns=[
@@ -10,7 +10,7 @@ urlpatterns=[
     ),
     path(
         route='add_question_paper/',
-        view=add_exam,
+        view=CreateQuestionPaperView.as_view(),
         name='add_question_paper'
     ),
 ]
